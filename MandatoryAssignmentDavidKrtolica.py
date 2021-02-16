@@ -1,4 +1,5 @@
 # TASK1 - CREATE 3 SETS OF AN ORGANIZATION
+print("TASK1----------------------------------------------------------")
 
 boardOfDirs = {'Benny', 'Hans', 'Tine', 'Mille', 'Torben', 'Troels', 'Søren'}
 management = {'Tine', 'Trunte', 'Rane'}
@@ -52,6 +53,7 @@ print("\n\n")
 
 
 #TASK 2 - CREATE A LIST OF TUPLES
+print("TASK2----------------------------------------------------------")
 
 taskDict = {'a':'Alpha', 'b':'Beta', 'g':'Gamma'}
 
@@ -63,6 +65,7 @@ print("\n\n")
 
 
 #TASK 3 - SETS TASK
+print("TASK3----------------------------------------------------------")
 
 s1 = {'a', 'e', 'i', 'o', 'u', 'y'}
 s2 = {'a', 'e', 'i', 'o', 'u', 'y', 'æ' ,'ø', 'å'}
@@ -89,6 +92,7 @@ print("\n\n")
 
 
 # TASK 4 - DATE DECODER
+print("TASK4----------------------------------------------------------")
 
 monthDict = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
