@@ -2,13 +2,17 @@ import os
 import subprocess
 
 subprocess.run(['pip', 'install', 'requests'])
+subprocess.run(['pip3', 'install', 'beautifulsoup4'])
 
 import requests
+from bs4 import BeautifulSoup
 
-userInputURL = input("Enter the URL here: ")
-res = requests.get(userInputURL)
+inputURL = 'http://www.extremeprogramming.org'
+page = requests.get(inputURL)
+soup = BeautifulSoup(page.content, 'html.parser')
+
 f = open('xp.html', 'w')
-f.write(res.text)
+f.write(soup.prettify())
 
 pic1 = requests.get('http://www.extremeprogramming.org/images/xplogo.gif')
 pic2 = requests.get('http://www.extremeprogramming.org/images/apo.gif')

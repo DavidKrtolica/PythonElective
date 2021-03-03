@@ -14,6 +14,13 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 results = soup.find_all('div', class_='PaidJob-inner')
 
+
+print('\n\n')
+
 for job in results:
-    title = job.find('b')
-    print(title.text.strip())
+    result = job.find_all('b')
+    title = result[0].text.strip()
+    company = job.find('p').text.strip()
+    print(f'Job title: {title}\nCompany: {company}\n')
+
+print('\n\n')
