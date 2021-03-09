@@ -17,6 +17,9 @@ class Person:
         #self.name = name
         #self.age = age
 
+    def name_age(self):
+        return name + ' ' + age
+
 
 
 class Instructor:
