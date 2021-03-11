@@ -32,6 +32,7 @@ class Workspace():
     def __init__(self):
         self.instructions = ("What steps do you want to perform? \n"
         "Options: move forward(f), turn left(l), turn right(r) \n"
+        "! BEWARE ! --> CANNOT TURN FOR 360 DEGREES !!! \n"
         "Type \"q\" when finished")
 
     def printInstr(self):
