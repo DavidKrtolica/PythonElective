@@ -32,7 +32,6 @@ class Workspace():
     def __init__(self):
         self.instructions = ("What steps do you want to perform? \n"
         "Options: move forward(f), turn left(l), turn right(r) \n"
-        "! BEWARE ! --> CANNOT TURN FOR 360 DEGREES !!! \n"
         "Type \"q\" when finished")
 
     def printInstr(self):
@@ -50,8 +49,14 @@ class Game():
         userInput = ""
         while (userInput != 'q'):
             userInput = input("Move: ")
-            if (userInput == 'r'):
+            if (userInput == 'r' and self.Board.Bird.direction == 3):
+                self.Board.Bird.direction = 0
+                self.Board.printBoard()
+            elif (userInput == 'r'):
                 self.Board.Bird.direction += 1
+                self.Board.printBoard()
+            elif (userInput == 'l' and self.Board.Bird.direction == 0):
+                self.Board.Bird.direction = 3
                 self.Board.printBoard()
             elif (userInput == 'l'):
                 self.Board.Bird.direction -= 1
